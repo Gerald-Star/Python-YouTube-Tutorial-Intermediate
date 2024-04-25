@@ -1,0 +1,61 @@
+
+
+
+# What is a Python Scope ?
+
+# A scope is a textual region of a Python program where a namespace is directly accessible. "Directly accessible" here means that an unqualified reference to a name attempts to find the name in the namespace.
+# There are following scopes in Python:
+# Local scope and Enclosing scope and Global scope and Built-in scope
+# A variable is only available from inside the region it is created. This is called scope.
+
+#? LOCAL SCOPE
+# A variable created inside a function belongs to the local scope of that function, and can only be used inside that function.
+
+#? Global SCOPE
+# A variable created outside of a function is global and can be used by anyone:
+
+#? Enclosing SCOPE
+# This scope is for nested functions. If a variable is not found in the local scope, the scope of the enclosing function is searched.
+# If the variable is not in the enclosing function, the next outer scope is searched, and so on until the built-in scope.
+# In the below example, the variable x is not local to the inner function, but it is nonlocal, so it is searched in the enclosing function.
+
+def outer_function():
+    x = 300
+
+    def inner_function():
+        print(x)
+
+    inner_function()
+
+#? Built-in SCOPE
+
+# A variable that is created in the main body of the Python code is a global variable and belongs to the global scope.
+# Global variables are available from within any scope, global and local.
+# In the below example, the variable x is global, so it is available in the inner function.
+
+def myFunc_():
+    print(x)
+    
+x = 300
+
+myFunc_()
+
+#? Global Keyword
+# If you need to create a global variable, but are stuck in the local scope, you can use the global keyword.
+# The global keyword makes the variable global.
+
+#? Nonlocal Keyword
+
+# If you want to assign a value to a variable defined in the enclosing scope, you can use the nonlocal keyword.
+# The nonlocal keyword makes the variable nonlocal.
+
+#? Global Variable
+# Variables that are created outside of a function (as in all of the examples above) are known as global variables.
+# Global variables can be used by everyone, both inside of functions and outside.
+
+#? Local Variable
+
+# A variable created inside a function belongs to the local scope of that function, and can only be used inside that function.
+ 
+
+# Function inside Function 
