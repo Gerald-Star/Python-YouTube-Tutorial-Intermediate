@@ -1,5 +1,4 @@
 
-# What is Python Classes/Objects?
 
 # Python is an object oriented programming language.
 
